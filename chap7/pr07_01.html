@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>난수 10개 생성</h2>
+        <hr>
+        <script>
+            //let plots=new Array() 별로 좋은방법 아니야
+            let plots = [];
+            for(let i=0; i<10; i++) {
+                plots.push(Math.floor(Math.random()*100) + 1);
+            }
+            document.write(`${plots.join(' ')}`);  //template string
+            document.write("<br>");
+            let arrmax = plots.reduce((a,b)=>a>b?a:b, plots[0]);
+            document.write("제일 큰 수는 " + arrmax);
+            plots.sort((a,b)=>a-b);
+            document.write(`<hr>${plots.join(' ')}`);
+        </script>
+    </body>
+</html>

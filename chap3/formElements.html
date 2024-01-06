@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>폼 요소</title>
+    </head>
+    <body>
+        <h3>다양한 폼 요소</h3>
+        <hr>
+        <form>
+            <datalist id="capitals">
+                <option>서울</option>
+                <option>베이징</option>
+                <option>워싱턴</option>
+            </datalist>
+            텍스트: <input type="text" size="20" list="capitals"> <br>
+            텍스트 area: <textarea rows="10" cols="40"></textarea> <br>
+            암 호: <input type="password" size="20" maxlength="4"> <br>
+            <input type="button" value="버튼"> &nbsp;&nbsp;
+            <input type="submit"> &nbsp;&nbsp;
+            <input type="reset"> &nbsp;&nbsp;
+            <input type="image" src="../../web/media/naver.png" width="50"><br>
+            <button type="button" value="button">버튼</button> &nbsp;&nbsp;
+            <button type="button" value="submit">제출</button> &nbsp;&nbsp;
+            <button type="button" value="reset">초기화</button> &nbsp;&nbsp;
+            <button type="button"><img src="../../web/media/naver.png" width=30></button> &nbsp;&nbsp;
+            <br>
+            <br>
+            체크박스<br>
+            <label>짜장면: <input type="checkbox" name="food" value="china1"></label>&nbsp;&nbsp;
+            <label for="china2">짬뽕: </label>
+            <input type="checkbox" id="china2" name="food" value="china2">&nbsp;&nbsp;
+            <br><br>
+            라디오 버튼<br>
+            콜라: <input type="radio" name="drink" value="d1">&nbsp;&nbsp;
+            사이다: <input type="radio" name="drink" value="d2">&nbsp;&nbsp;
+            주스: <input type="radio" name="drink" value="d3">&nbsp;&nbsp;
+            <br>
+            셀렉트<br>
+            <select name="dessert">
+                <option value="d1">아이스크림</option>
+                <option value="d2">커피</option>
+                <option value="d3">홍차</option>
+            </select> <br>
+            색깔: <input type="color">
+            <br>
+            시간 관련: <br>
+            <input type="date"> &nbsp;&nbsp;
+            <input type="time"> &nbsp;&nbsp;
+            <input type="datetime-local"> &nbsp;&nbsp;<br>
+            <input type="week"> &nbsp;&nbsp;
+            <input type="month"> &nbsp;&nbsp;
+            <br>
+            <br>
+            <fieldset>
+                숫자 관련: <br>
+                <input type="number" min="0" max="5" step="0.5" value="0"> &nbsp;&nbsp;
+                <input type="range" min="0" max="5" step="0.5" value="0"> &nbsp;&nbsp;
+                <br> <br>
+                형식 텍스트 입력: 
+                <br>
+                <input type="email"> &nbsp;&nbsp; 
+                <input type="phone"> &nbsp;&nbsp; <button type="button" value="submit">제출</button>
+                <legend>숫자나 형식</legend>
+            </fieldset>
+            
+        </form>
+    </body>
+</html>

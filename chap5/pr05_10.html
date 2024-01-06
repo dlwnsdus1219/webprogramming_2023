@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=decice-width, initial-scale=1.0">
+        <title>애니메이션</title>  
+        <style>
+            @keyframes moveText {
+                0% {
+                    margin-left: 100%;
+                }
+                100% {
+                    margin-left: 0%;
+                }
+            }
+            p{ 
+                animation-name: moveText;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
+            }
+            
+        </style> 
+         
+    </head>
+    <body>
+        <h2>애니메이션 응용</h2>
+        <hr>
+        <p>
+            <img id="question" src="question.png" width="30px" height="30px">
+            질문 있습니다
+        </p>
+    </body>  
+</html>

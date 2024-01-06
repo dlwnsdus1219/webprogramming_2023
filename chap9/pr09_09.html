@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div.details{
+                position: absolute;
+                background-color: lightskyblue;
+                width : 150px;
+                display: none;
+            }
+        </style>
+        <script>
+            function displayDetails(e, divID){
+                let div = document.querySelector(`#${divID}`);
+                console.log(div.innerHTML);
+                div.style.display = 'inline-block';
+                div.style.top = e.y + 'px';
+                div.style.left = e.x + 'px';
+            }
+            function hideDetails(e, divID){
+                let div = document.querySelector(`#${divID}`);
+                div.style.display = 'none';
+            }
+        </script>
+    </head>
+    <body>
+        <h2>아이템에 마우스 올리면 자세한 설명 출력</h2>
+        <hr>
+        <p>여름 방학에 하고 싶은 것들</p>
+        <ul>
+            <li onmouseover="displayDetails(event, 'bike')" 
+            onmouseout="hideDetails(event, 'bike')">자전거로 대한민국 일주</li>
+            <li onmouseover="displayDetails(event, 'book')" 
+            onmouseout="hideDetails(event, 'book')">책 100권 읽기</li>
+            <li onmouseover="displayDetails(event, 'iron')" 
+            onmouseout="hideDetails(event, 'iron')">철인 3종 경기 완주하기</li>
+        </ul>
+        <div class="details" id="bike">
+            빨간색 자전거를 타고 서울, 대구, 부산 찍고 목포, 인천을 거쳐 달린다
+        </div>
+        <div class="details" id="book">
+            누구를 위해 종을 울리나, 전쟁과 평화 등 톨스토이 작품을 많이 읽고 싶어요
+        </div>
+        <div class="details" id="iron">
+            마라톤 10킬로를 뛰고, 수영을 2킬로 자유형으로 하고, 사격을 합니다. 
+        </div>
+    </body>
+</html>

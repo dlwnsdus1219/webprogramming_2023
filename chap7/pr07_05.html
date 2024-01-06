@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            document.write("<h2>문자열 배열 다루기</h2>");
+            document.write("<hr>");
+            let names = ['wonsun', 'jamoonlee', 'kitae', 'gracehwang'];
+            for(let name of names) {
+                document.write(name + ' ');
+            }
+            document.write("<br>");
+            let longname=names[0];
+            for(let i=1;i<names.length;i++) {
+                if(names[i].length > longname.length) {
+                    longname=names[i];
+                }
+            }
+            document.write("longest name: " + longname);
+
+            document.write("<br>");
+            longname = names.reduce((a,b)=>a.length>b.length?a:b, names[0]);
+            document.write("longest name: " + longname);
+
+            names.sort();
+            document.write("<br>");
+            document.write("가장 먼저 나오는 이름: " + names[0]);
+            document.write("<br>");
+            document.write("증가 순 이름: " + names.join(' '));
+        </script>   
+    </body>
+</html>

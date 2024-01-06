@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>아이템을 클릭하면 1.3배 크기로</h3>
+        <hr />
+        <p>여름 방학 때 하고 싶은 것들</p>
+        <ul>
+            <li>자전거로 대한민국 일주</li>
+            <li>책 100권 읽기</li>
+            <li>철인 3종 경기 준비</li>
+            <li>자바스크립트 정복</li>
+        </ul>
+        <script>
+            // 모든 li 요소를 가져옵니다.
+            var items = document.querySelectorAll("li");
+
+            // 현재 확대된 항목을 추적하기 위한 변수입니다.
+            var currentlyExpanded = null;
+
+            // 각 항목에 대해 이벤트 리스너를 설정합니다.
+            items.forEach(function (item) {
+                item.addEventListener("click", function () {
+                    // 다른 항목이 이미 확대되어 있다면, 그 크기를 원래대로 돌립니다.
+                    if (currentlyExpanded && currentlyExpanded !== item) {
+                        currentlyExpanded.style.fontSize = "1em";
+                    }
+
+                    // 클릭된 항목의 크기를 변경합니다.
+                    item.style.fontSize = "1.3em";
+
+                    // 현재 확대된 항목을 업데이트합니다.
+                    currentlyExpanded = item;
+                });
+            });
+        </script>
+    </body>
+</html>

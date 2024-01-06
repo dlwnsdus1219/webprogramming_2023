@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>do-while문 실습</title> 
+    </head>
+    <body>
+        <h3>암호를 입력하라!!</h3>
+        <hr>
+        <script>
+            let res = ""
+            do{
+                let res = prompt("암호를 입력하라.", "");
+                if (res == "you")
+                    break;
+            } while (true);
+            document.write("통과!!")
+        </script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+        <style>
+            button {
+                width: 60px;
+                height: 20px;
+                margin: 5px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="calculator">
+            <!-- 계산기 디스플레이 -->
+            <input type="text" id="display" value="0" disabled />
+
+            <!-- 버튼들 -->
+            <div>
+                <button onclick="backspace()">BACK</button>
+                <button onclick="clearDisplay()">CE</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="calculate()">=</button>
+            </div>
+
+            <div>
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendOperator('/')">/</button>
+            </div>
+
+            <div>
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendOperator('*')">*</button>
+            </div>
+
+            <div>
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="appendOperator('-')">-</button>
+            </div>
+
+            <div>
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendOperator('+')">+</button>
+                <button onclick="noFunction()">NONE</button>
+                <button onclick="noFunction()">NONE</button>
+            </div>
+        </div>
+
+        <script>
+            function appendNumber(number) {
+                const display = document.getElementById("display");
+                if (display.value === "0") {
+                    display.value = number;
+                } else {
+                    display.value += number;
+                }
+            }
+
+            function appendOperator(operator) {
+                const display = document.getElementById("display");
+                display.value += operator;
+            }
+
+            function clearDisplay() {
+                document.getElementById("display").value = "0";
+            }
+
+            function backspace() {
+                const display = document.getElementById("display");
+                display.value = display.value.slice(0, -1) || "0";
+            }
+
+            function calculate() {
+                const display = document.getElementById("display");
+                try {
+                    display.value = eval(display.value);
+                } catch (e) {
+                    display.value = "Error";
+                }
+            }
+
+            function noFunction() {
+                // 아무 기능도 수행하지 않습니다.
+            }
+        </script>
+    </body>
+</html>

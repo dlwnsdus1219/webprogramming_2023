@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>eval()로 수식 계산</title>
+    </head>
+    <body>
+        <h2>eval()로 수식 계산</h2>
+        <hr>
+        <script>
+            let aaa = ""
+            do{
+                let aaa = prompt("수식 입력.", "");
+                let bbb = eval(aaa);
+                if(isFinite(bbb) == true)
+                    document.write(aaa + "=" + bbb);
+                    break;
+            }while(true)
+        </script>
+
+    </body>
+</html>

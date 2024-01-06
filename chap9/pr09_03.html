@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>계산기 만들기</title>
+    </head>
+    <body>
+        <h2>계산기 만들기</h2>
+        <hr>
+        <p>
+            수식을 입력하여 &lt;Enter&gt;를 입력하세요.
+        </p>
+        <form>
+            식 <input type="text" id="userinput"><br>
+            값 <input type="text" id="result">
+        </form>
+        <script>
+            let input = document.querySelector('#userinput');
+            let result = document.querySelector('#result');
+            input.onkeydown = function(e) {
+                console.log(e.keyCode);
+                if(e.keyCode==13) {
+                    result.value = eval(input.value);
+                }
+                return true;  //사용자가 정의한 이벤트 리스너 디폴트 행동
+                //return false; //아예 출력 안됨
+            }
+        </script>
+    </body>
+</html>

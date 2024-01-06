@@ -1,0 +1,24 @@
+{
+  "name": "expressserver",
+  "version": "1.0.0",
+  "description": "express web server",
+  "main": "index.js",
+  "scripts": {
+    "test": "NAME"
+  },
+  "repository": {
+    "type": "git",
+    "url": "all"
+  },
+  "keywords": [
+    "express",
+    "framework",
+    "node",
+    "server"
+  ],
+  "author": "jy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

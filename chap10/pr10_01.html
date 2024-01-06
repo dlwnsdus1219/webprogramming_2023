@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>윈도우 열기</title>
+        <script>
+            function load(URL) {
+                window.open(URL, "myWin", "left=300,top=300,width=500,height=200");
+            }
+        </script>
+    </head>
+    <body>
+        <h3>window.open()으로 윈도우 열기</h3>
+        <hr>
+        <a href="javascript:load('https://www.naver.com/')">
+            네이버 웹페이지
+        </a><br>
+        <a href="javacsript:load('https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8C%80%EB%AC%B8')">
+            나무위키 웹페이지
+        </a><br>
+    </body>
+</html>

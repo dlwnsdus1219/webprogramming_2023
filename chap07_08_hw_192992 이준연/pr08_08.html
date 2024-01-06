@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>transform.rotate()</title>
+        <script>
+            var n = 2;
+            function bigger(obj) {
+                obj.style.transform="scale(" + n + ",1)"
+                n ++;
+                
+                if (n = 5){
+                    return 0;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+        <hr>
+        <img src="spongebob.png" onclick="bigger(this)" width="100" height="100">
+    </body>
+</html>

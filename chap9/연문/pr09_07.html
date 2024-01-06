@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <script>
+        window.onmouseover = function(e) {
+            console.log(e.target.tagName);
+            if(e.target.tagName=='SPAN'){
+                e.target.style.textDecoration = 'underline';
+            }
+        }
+
+        window.onmouseout = function(e) {
+            if(e.target.tagName=='SPAN'){
+                e.target.style.textDecoration = 'none';
+            }
+        }
+    </script>
+    <body>
+        <h3>span 태그에 대해서만 마우스 이벤트 처리</h3>
+        <hr>
+        <p>하하하 <span>호호</span> 킬킬킬
+        <span>흐흐흐</span> 크크크
+        </p>      
+    </body>
+</html>

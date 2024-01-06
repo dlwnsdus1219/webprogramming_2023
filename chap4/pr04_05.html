@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>클래스 셀렉터</title>
+        <style>
+            body{
+                background-color: deepskyblue;
+            }
+            h3{
+                text-align: left;
+                color: darkgreen;
+            }
+            #center {
+                text-align: center;
+            }
+            div>strong{
+                /*width: 60px;*/
+                background-color: yellow;
+            }
+            p{
+                text-indent: 3em;
+            }
+            em{
+                color: green;
+            }
+            /*p의 직계 자식인 strong에 적용*/
+            p>strong{
+                color: red;;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>얼굴</h3> 
+        <hr>
+        <div id="center">
+            <strong>박인희</strong>
+        </div>
+        <div class="indent">
+            <p>
+                <em>길</em>을 걷고 산들 무엇하리
+                <strong>꽃</strong>이 내가 아닌듯 내가 
+                <strong>꽃</strong>이 될 수 없는 지금....
+            </p>
+        </div>       
+    </body>
+</html>

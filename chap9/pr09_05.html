@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function setRandomBGC() {
+                let r = Math.floor(Math.random() * 256);
+                let g = Math.floor(Math.random() * 256);
+                let b = Math.floor(Math.random() * 256);
+                document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>브라우저의 아무 곳이나 더블 클릭</h3>
+        <hr>
+        <p>브라우저의 아무 곳이나 더블 클릭하면 배경색이 랜덤</p>
+        <script>
+            window.ondblclick = setRandomBGC();
+        </script>
+    </body>
+</html>

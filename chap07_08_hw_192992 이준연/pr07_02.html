@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>정수 5개 입력받아 역순으로 입력</title>
+    </head>
+    <body>
+        <h2>정수 5개 입력받아 역순으로 입력</h2>
+        <hr>
+        <script>
+            let arr1 = new Array(5);
+            let x = 0;
+            for (let i=0; i<5; i++) {
+                let ai = prompt("정수 입력", 0);
+                arr1[i] = ai
+            }
+            document.write("입력된 수의 배열<br>");
+            for (let j=0; j<5; j++) {
+                document.write(arr1[j] + " ");
+            }
+            // document.write(arr1)
+            document.write("<hr>");
+            arr_rev = arr1.reverse()
+            document.write("역순으로 재정렬된 배열<br>");
+            for (let k=0; k<5; k++) {
+                document.write(arr_rev[k] + " ")
+            }
+            // document.write(arr1.reverse());
+        </script>
+    </body>
+</html>
+
+<!-- # 수정 사항
+## 배열 출력 시 comma 없에기
+## for 함수에서 배열에 정수형만 넣는 법 연구하기 -->

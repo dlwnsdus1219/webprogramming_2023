@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>갬블링 게임</title>
+        <style>
+            span{
+                cursor: pointer;
+            }
+            .gaming{
+                font-size: 3em;
+                border: 1px solid violet;
+                background-color: pink;
+                width: 150px;
+                display: flex;
+                justify-content: space-around;
+                color: indigo;
+                font-style: italic;
+            }
+            #result{
+                margin-top: 30px;
+                font-style: italic;
+                font-size: 30px;
+                color: red;
+            }
+        </style>
+        <script>
+           function changeNumber(obj) {
+            obj.innerHTML = Math.floor(Math.random() * 3);
+            
+            
+           }
+        </script>
+    </head>
+    <body>
+        <h3>갬블링 게임</h3>
+        <p>각 숫자를 클릭하면 0에서 2 사이 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.</p>
+        <hr>
+        <div class="gaming">
+            <span onclick="changeNumber(this)" id="num1">0</span>
+            <span onclick="changeNumber(this)" id="num2">0</span>
+            <span onclick="changeNumber(this)" id="num3">0</span>
+        </div>
+        <div id="result" onclick="replay()"></div>
+    </body>
+</html>

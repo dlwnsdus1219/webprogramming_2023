@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>박스 모델</title>
+        <style>
+            body{
+                background: ghostwhite;
+            }
+            span{
+                background: deepskyblue;
+            }
+            div.box{
+                background: yellow;
+                border-style: solid;  /*경계선 형태는 직선으로*/
+                border-color: peru;
+                margin: 40px;
+                border-width: 30px;
+                padding: 20px;
+            }
+            div > p{
+                border-width: 3px;
+                border-style: dotted;
+                border-color: blue;
+            }
+            #round1{
+                background: #90D000;
+                width: 300px;
+                padding: 20px;
+                border-radius: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <span>DIVDIVDIV</span>
+            <p>박스모델</p>
+        </div>
+        <p style="border: 15px groove yellow">15픽셀 groove</p>
+        <p id="round1">반지름 50픽셀의 둥근 모서리</p>
+    </body>
+</html>

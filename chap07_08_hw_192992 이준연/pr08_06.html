@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>innerHTML 프로퍼티 다루기 연습</title>
+        <script>
+            function travel(obj) {
+                obj.innerHTML = prompt("HTML 텍스트 혹은 그냥 텍스트를 입력하세요.");
+            }
+        </script>
+    </head>
+    <body>
+        <h3>innerHTML</h3>
+        <hr>
+        <p onclick = "travel(this)">이번 여름에는 어디로 여행을 갈까요?</p>
+    </body>
+</html>

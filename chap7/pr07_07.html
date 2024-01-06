@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>5개의 CSS 색이름과 색</h2>
+    <script>
+        let colorNames = ['maroon', 'red', 'orange', 'yellow', 'olive'];
+        for(let color of colorNames) {
+            let divStr = "<div " + "style='background-color:" + color + "'" + ">"
+             + color + "</div>";
+            document.write(divStr);
+        }
+    </script>
+</body>
+</html>

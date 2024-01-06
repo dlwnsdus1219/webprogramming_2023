@@ -1,0 +1,12 @@
+body{
+    font-family: "Lucida Console";
+}
+p{ 
+    background-color: aliceblue;
+    color: brown;
+    text-indent: 2em;
+}
+span{
+    font-size: 1.5em;
+    text-decoration: underline;
+}

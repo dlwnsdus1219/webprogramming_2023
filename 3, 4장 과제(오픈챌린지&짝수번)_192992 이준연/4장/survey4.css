@@ -1,0 +1,31 @@
+p{
+    font-family: 휴먼편지체;
+    font-size: 1em;
+    text-indent: 1em;
+}
+body{
+    background-color: rgb(156, 196, 232);
+}
+h2{
+    color: brown;
+    text-align: center;
+}
+form{
+    background-color: pink;
+    color: blue;
+}
+select{
+    font-family: 휴먼편지체;
+}
+label{
+    font-family: 휴먼편지체;
+    color: black;
+}
+div{
+    font-family: 고딕;
+}
+#copy{
+    font-family: 휴먼편지체;
+    background-color: orange;
+    border-radius: 10px 10px;
+}

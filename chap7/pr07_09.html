@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let b1 = {
+            title: 'html5',
+            author: 'kitae',
+            price: 20000,
+            toString: function() {
+                return `${this.title}, ${this.author}, ${this.price}`;
+            }
+        };
+        document.write('book: ' +  b1.toString());
+
+        let b2 = new Object();
+        b2.title = 'html4';
+        b2.author = 'grace';
+        b2.price = 20000;
+        b2.toString = function() {
+            return `${this.title}, ${this.author}, ${this.price}`;
+        }
+        document.write("<hr>");
+        document.write('book: ' + b2.toString());
+
+        function Book(t, a, p) {
+            this.title = t;
+            this.author = a;
+            this.price = p;
+            Book.prototype.toString = function() {
+                return `${this.title}, ${this.author}, ${this.price}`;
+            }
+        }
+        let b3 = new Book('node', 'alex', 50000);
+        document.write("<hr>book: " + b3.toString());
+
+        class Book2 {
+            constructor(t, a, p) {
+                this.title = t;
+                this.author = a;
+                this.price = p;
+            }
+            toString() {
+                return `${this.title}, ${this.author}, ${this.price}`;
+            }
+        }
+        let b4 = new Book2('novel', 'helen', 10000);
+        document.write("<hr>book: " + b4.toString());
+
+    </script>
+    
+</body>
+</html>

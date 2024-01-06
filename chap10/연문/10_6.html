@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Clickable Clock</title>
+    <style>
+        #clock {
+            display: inline-block;
+            font-size: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        let clockInterval;
+        function updateClock() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            // 시간, 분, 초가 10보다 작으면 앞에 0을 붙여줍니다.
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+        }
+
+        function toggleClock() {
+            let clockDiv = document.getElementById('clock');
+            if (clockInterval) {
+                clearInterval(clockInterval);
+                clockInterval = null;
+                clockDiv.style.opacity = 0.5; // 시계가 멈췄음을 표시
+            } else {
+                clockInterval = setInterval(updateClock, 1000);
+                clockDiv.style.opacity = 1; // 시계가 동작 중임을 표시
+            }
+        }
+
+        window.onload = function () {
+            // 페이지가 로드될 때 시계를 시작합니다.
+            clockInterval = setInterval(updateClock, 1000);
+            document.getElementById('clock').addEventListener('click', toggleClock);
+            updateClock(); // setInterval 다음에 즉시 현재 시간을 업데이트합니다.
+        };
+    </script>
+</head>
+
+<body>
+    <h3>div 태그에 시계 만들기</h3>
+    <p>
+        시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작한다.
+    </p>
+    <hr>
+    <div id="clock"></div>
+</body>
+
+</html>

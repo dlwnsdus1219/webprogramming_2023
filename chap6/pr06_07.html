@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>큰 자리 수와 낮은 자리 수 비교</h2>
+        <hr>
+        <script>
+            let user=prompt("숫자 입력");
+            user=parseInt(user);
+            let smallest=user%10;
+            let tmpUser = user;
+            while(tmpUser >= 10){
+                tmpUser = Math.floor(tmpUser = tmpUser/ 10);
+                console.log(tmpUser);
+            }
+            document.write(user+":");
+            if(smallest == tmpUser){
+                document.write("같음");
+            } else {
+                document.write("다름");
+            }
+        </script>
+    </body>
+</html>
